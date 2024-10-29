@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+  <h1 class="text-center mb-4">Iniciar Sesión</h1>
+  <% if (error) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+    <% } %>
+      <form action="/users/login" method="POST" class="container w-50">
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su correo" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Ingrese su contraseña"
+            required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+      </form>
+
+<%- include('partials/footer') %>

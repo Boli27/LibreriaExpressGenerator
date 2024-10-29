@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<h2 class="text-center mb-4">Registrar Usuario</h2>
+<% if (error) { %>
+    <div class="alert alert-danger" role="alert">
+        <%= error %>
+    </div>
+<% } %>
+<form action="/users/register" method="POST" class="container w-50">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Correo</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su correo" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Registrar</button>
+</form>
+
+
+<%- include('partials/footer') %>
