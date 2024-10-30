@@ -16,12 +16,5 @@ router.get('/login', (req, res) => {
   res.render('login', { error: null,title: 'Iniciar Sesion' }); // No hay error inicialmente
 });
 
-router.get('/logout', (req, res) => {
-  req.session.destroy(err => {
-     if (err) {
-        return res.redirect('/');
-     }
-     res.render('login', { error: null,title: 'Iniciar Sesion' }); // Redirige al login después de cerrar sesión
-  });
-});
+router.get('/logout', UsersController.logout);
 module.exports = router;

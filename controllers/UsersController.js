@@ -40,6 +40,15 @@ const UsersController = {
       } else {
          res.render('login', { error: 'Credenciales incorrectas' , title: 'Iniciar Sesión',});
       }
+   },
+
+   logout:(req, res) =>{
+      req.session.destroy(err => {
+         if (err) {
+            return res.redirect('/');
+         }
+         res.render('login', { error: null,title: 'Iniciar Sesion' });
+      });
    }
 };
 

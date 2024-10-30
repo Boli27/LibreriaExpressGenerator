@@ -16,5 +16,17 @@
     "email": "alicee@example.com",
     "password": "password123",
     "role": "client"
+  },
+  {
+    "name": "Boli",
+    "email": "aliceee@example.com",
+    "password": "password123",
+    "role": "client"
+  },
+  {
+    "name": "Boli",
+    "email": "boli@example.com",
+    "password": "password123",
+    "role": "client"
   }
 ]
